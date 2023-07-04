@@ -102,17 +102,23 @@ ORDER BY country DESC
 
 17 - Muestra los nombres de los idiomas en orden alfab�tico inverso.
 
-
+SELECT name FROM language
+ORDER BY name DESC
 
 
 18- Muestra los nombres de las tiendas en orden ascendente.
 
-
+SELECT store_id FROM store 
+ORDER BY store_id ASC
 
 
 19- Muestra los nombres de los staffs en orden alfab�tico por su apellido.
 
-
+SELECT last_name FROM staff
+ORDER BY last_name ASC
 
 
 20-Muestra los nombres de las pel�culas en orden descendente inverso.
+
+SELECT title FROM film
+ORDER BY title ASC
