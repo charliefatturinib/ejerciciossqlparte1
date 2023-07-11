@@ -11,7 +11,7 @@ SELECT payment_type, paid_date FROM orders
 WHERE payment_type= 'Credit Card'
 
 
-3-Obtener todos los productos donde cantidad m�nima de pedido
+3-Obtener todos los productos donde cantidad m�nima de pedido 
 
 
 
