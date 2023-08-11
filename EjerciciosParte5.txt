@@ -1,0 +1,105 @@
+A- Base de datos SAKILA - GENERALES
+
+1. Mostrar todas las películas en orden alfabético por título
+
+SELECT title FROM film 
+ORDER BY title ASC
+
+2. Mostrar los nombres y apellidos de todos los actores en orden inverso alfabético
+
+SELECT first_name, last_name FROM actor
+ORDER BY first_name DESC, last_name DESC
+
+
+
+3. Mostrar los nombres de todas las ciudades en orden alfabético inverso
+
+SELECT city FROM city 
+ORDER BY city DESC
+
+
+4. Mostrar los nombres de todas las categorías en orden alfabético junto con su ID
+
+SELECT name, category_id FROM category 
+ORDER BY name, category_id ASC
+
+
+5. Mostrar los nombres de todos los clientes en orden aleatorio
+
+
+SELECT first_name FROM customer 
+GROUP BY first_name 
+ORDER BY RAND()
+
+
+6. Mostrar los nombres de todos los idiomas en orden alfabético junto con su ID
+
+SELECT name, language_id FROM language 
+ORDER BY name, language_id ASC
+
+
+7. Mostrar los nombres de todos los empleados en orden inverso alfabético junto con su ID
+
+no comprendo
+
+
+8. Mostrar los nombres de todas las películas que tengan una clasificación "G" en orden alfabético
+
+
+SELECT title, rating FROM film 
+WHERE rating= 'g'
+
+
+
+9-  Mostrar los nombres de todas las películas que sean del lenaguaje "Ingles" en orden aleatorio
+
+
+SELECT title, language_id FROM film 
+WHERE language_id= 'ingles' 
+ORDER BY RAND()
+
+
+10. Mostrar los nombres de todos los actores que tienen una "a" en su apellido en orden inverso alfabético
+
+
+SELECT * FROM `actor` 
+WHERE last_name LIKE "a%"
+
+
+11. Mostrar los nombres de todas las películas que tengan una duración mayor a 120 minutos en orden alfabético
+
+SELECT title, length FROM film 
+WHERE length > 120 
+ORDER BY length ASC
+
+12. Mostrar los nombres de todas las películas que tienen una clasificación "PG-13" en orden inverso alfabético
+
+
+SELECT title, rating FROM film 
+WHERE rating= 'pg-13' 
+ORDER BY rating DESC
+
+
+
+13. Mostrar los nombres de todas las películas que tienen una duración menor a 90 minutos en orden alfabético.
+
+SELECT length FROM film 
+WHERE length< 90 
+ORDER BY length ASC
+
+
+14. Mostrar los nombres y apellidos de todos los actores cuyo apellido comienza con la letra "C" en orden inverso alfabético
+
+
+SELECT last_name FROM actor 
+WHERE last_name LIKE "C%" 
+ORDER BY last_name DESC
+
+
+
+15.  Mostrar los nombres de todas las películas que tienen una duración entre 90 y 120 minutos en orden aleatorio
+
+
+SELECT title, length FROM film 
+WHERE length BETWEEN 90 and 120 
+ORDER BY RAND()

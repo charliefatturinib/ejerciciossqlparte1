@@ -1,0 +1,20 @@
+GROUP BY Y HAVING
+
+1-Sacar el promedio de los precios, pero agrupado por categoria y redondear 
+y que no me muestre los valores NULL.
+
+SELECT CategoryID, round(AVG(Price),2) as promedio FROM products
+WHERE CategoryID is NOT null
+GROUP BY CategoryID 
+
+SELECT CategoryID, round(AVG(Price),2) as promedio FROM products
+WHERE CategoryID is NOT null
+GROUP BY CategoryID
+HAVING promedio > 40
+
+BD NORTHWIND2 
+
+1-Mostrar el numero de productos por categoria
+2-Mostrar la cantidad total de unidades vendidas por cada producto
+3-Mostrar el promedio de precios por categoria de producto.
+4-Mostrar las categorias de productos que tienen un promedio de precios a 30.

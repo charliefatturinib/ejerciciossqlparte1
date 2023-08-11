@@ -1,49 +1,49 @@
 Ejercicios varios  BD-SAKILA
 
-1-Actores que tienen de primer nombre ‘Scarlett’.
+1-Actores que tienen de primer nombre ï¿½Scarlettï¿½.
 
 SELECT first_name, last_name FROM actor
 WHERE first_name = 'scarlett'
 
-2-Actores que tienen de apellido ‘Johansson’.
+2-Actores que tienen de apellido ï¿½Johanssonï¿½.
 
 SELECT last_name FROM actor 
 WHERE last_name= 'johansson'
 
 
-3. Actores que contengan una ‘O’ en su nombre.
+3. Actores que contengan una ï¿½Oï¿½ en su nombre.
 
 SELECT * FROM `actor`
 WHERE first_name LIKE "O%"
 
 
-4. Actores que contengan una ‘O’ en su nombre y en una ‘A’ en su apellido.
+4. Actores que contengan una ï¿½Oï¿½ en su nombre y en una ï¿½Aï¿½ en su apellido.
 
 SELECT * FROM `actor` 
 WHERE first_name LIKE "%O%" and last_name like "%a%"
 
 
-5. Actores que contengan dos ‘O’ en su nombre y en una ‘A’ en su apellido.
+5. Actores que contengan dos ï¿½Oï¿½ en su nombre y en una ï¿½Aï¿½ en su apellido.
 
 SELECT * FROM `actor` 
 WHERE first_name LIKE "%O%O%" and last_name like "%a%"
 
 
-6. Actores donde su tercera letra sea ‘B’.
+6. Actores donde su tercera letra sea ï¿½Bï¿½.
 
 SELECT first_name FROM `actor`
 WHERE first_name LIKE '__B%'
 
 
 
-7. Ciudades que empiezan por ‘a’.
+7. Ciudades que empiezan por ï¿½aï¿½.
 
 SELECT city FROM city 
 WHERE city LIKE "A%";
 
 
 
-8. Ciudades que acaban por ‘s’.
+8. Ciudades que acaban por ï¿½sï¿½.
 
 SELECT city FROM city 
 WHERE city LIKE "%S";
@@ -56,8 +56,7 @@ SELECT city, country_id FROM city
 WHERE country_id= 61;
 
 
-
-10. Películas con una duración entre 80 y 100.
+10. Pelï¿½culas con una duraciï¿½n entre 80 y 100.
 
 
 SELECT title, length FROM film 
@@ -68,7 +67,9 @@ WHERE length BETWEEN 80 and 100 ORDER BY length;
 
 
 SELECT title, rental_rate FROM film 
-WHERE rental_rate BETWEEN 1 and 3 ORDER BY rental_rate desc;
+WHERE rental_rate 
+BETWEEN 1 and 3 
+ORDER BY rental_rate desc;
 
 
 
@@ -79,7 +80,7 @@ SELECT title, rating FROM film
 WHERE rating= 'pg' OR rating= 'g';
 
 
-13. Peliculas con un rating PG y duracion de más de 120.
+13. Peliculas con un rating PG y duracion de mï¿½s de 120.
 
 
 SELECT title, rating, length FROM film 

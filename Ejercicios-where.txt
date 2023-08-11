@@ -11,12 +11,10 @@ SELECT payment_type, paid_date FROM orders
 WHERE payment_type= 'Credit Card'
 
 
-3-Obtener todos los productos donde cantidad m�nima de pedido 
+3-Obtener todos los productos donde el precio sea menor a 10.000  
 
-
-
-
-
+SELECT product_name, list_price FROM products 
+WHERE list_price< '10.000'
 
 
 4- Obtener al empleado que vive en la direccion '123 4th Avenue'
@@ -45,11 +43,27 @@ Base de datos Sakila
 
 1- Muestra todos los actores cuyo apellido sea "Smith".
 
+SELECT last_name FROM actor 
+WHERE last_name= 'smith'
+
+
 2- Muestra todas las pel�culas cuya duraci�n sea superior a 120 minutos.
+
+SELECT title, length FROM film 
+WHERE length> '120'
+
+
 
 3- Muestra todas las pel�culas clasificadas como "PG-13".
 
+SELECT rating, title FROM film 
+WHERE rating= 'pg-13'
+
 4- Muestra todas las tiendas ubicadas en la ciudad con ID 300.
+
+
+
+
 
 5- Muestra todos los pagos realizados por el cliente con ID 5.
 
